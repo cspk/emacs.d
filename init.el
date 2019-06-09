@@ -104,13 +104,3 @@ There are two things you can do about this warning:
     (funcall f)))
 
 (advice-add 'save-buffer :around #'inhibit-save-message)
-
-
-;(doom-modeline-def-modeline 'my-simple-line
-;  '(bar matches buffer-info remote-host buffer-position misc-info parrot selection-info)
-;  '(minor-modes input-method buffer-encoding major-mode process vcs checker))
-
-;(defun setup-custom-doom-modeline ()
-;  (doom-modeline-set-modeline 'my-simple-line 'default))
-
-;(add-hook 'doom-modeline-mode-hook 'setup-custom-doom-modeline)
