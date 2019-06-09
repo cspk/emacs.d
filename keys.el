@@ -1,9 +1,9 @@
 ;; These are really a nonsense with my keyboard setup.
-(global-unset-key (kbd "C-f"))
-(global-unset-key (kbd "C-b"))
-(global-unset-key (kbd "C-n"))
-(global-unset-key (kbd "C-p"))
-(global-unset-key (kbd "M-c"))
+(global-unset-key (kbd "C-f")); forward-char
+(global-unset-key (kbd "C-b")); backward-char
+(global-unset-key (kbd "C-n")); next-line
+(global-unset-key (kbd "C-p")); previous-line
+(global-unset-key (kbd "M-c")); upcase-char
 
 (global-set-key (kbd "C-x k") 'kill-current-buffer)
 (global-set-key (kbd "M-x") 'helm-M-x)
