@@ -74,6 +74,7 @@ There are two things you can do about this warning:
 (setq-default c-basic-offset 4)
 (setq-default auto-save-default nil)
 (setq-default make-backup-files nil)
+(setq-default require-final-newline t)
 (setq-default projectile-switch-project-action 'helm-projectile)
 (setq-default show-trailing-whitespace t)
 (setq-default scroll-conservatively 101)
