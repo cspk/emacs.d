@@ -86,6 +86,7 @@ There are two things you can do about this warning:
 (setq-default create-lockfiles nil)
 (setq-default org-log-done 'note)
 (setq-default org-startup-indented t)
+(setq-default find-file-visit-truename t)
 
 ;(whole-line-or-region-global-mode t)
 (doom-modeline-mode)
