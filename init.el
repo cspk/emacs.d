@@ -22,6 +22,9 @@ There are two things you can do about this warning:
 ;; You may delete these explanatory comments.
 (package-initialize)
 
+(setq custom-file (concat user-emacs-directory "/custom.el"))
+(load-file custom-file)
+
 (unless package-archive-contents
   (package-refresh-contents))
 (package-install-selected-packages)
@@ -29,9 +32,6 @@ There are two things you can do about this warning:
 (unless (display-graphic-p)
   (require 'terminal-focus-reporting)
   (terminal-focus-reporting-mode))
-
-(setq custom-file (concat user-emacs-directory "/custom.el"))
-(load-file custom-file)
 
 (defun server-shutdown ()
   "Save buffers, Quit, and Shutdown (kill) server"
