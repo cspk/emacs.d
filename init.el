@@ -49,6 +49,8 @@ There are two things you can do about this warning:
 (add-hook 'prog-mode-hook 'fci-mode); set long line ruler
 (add-hook 'git-commit-mode-hook 'fci-mode)
 
+(setq org-agenda-files '("~/doc/notes"))
+
 (global-diff-hl-mode)
 (global-display-line-numbers-mode)
 (global-hl-line-mode)
