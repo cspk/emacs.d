@@ -68,6 +68,7 @@ There are two things you can do about this warning:
 (diff-hl-margin-mode); use margin for diff signs
 (diff-hl-flydiff-mode); on-the-fly highlighting (without having to save file)
 (column-number-mode)
+(electric-pair-mode)
 
 (add-to-list 'default-frame-alist
              '(font . "Terminus-10"))
@@ -82,7 +83,6 @@ There are two things you can do about this warning:
 (setq-default projectile-switch-project-action 'helm-projectile)
 (setq-default show-trailing-whitespace t)
 (setq-default scroll-conservatively 101)
-(setq-default electric-pair-mode t)
 (setq-default echo-keystrokes 0.01)
 (setq-default git-commit-summary-max-length 50)
 (setq-default column-number-indicator-zero-based nil)
