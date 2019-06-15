@@ -48,6 +48,7 @@ There are two things you can do about this warning:
 (add-hook 'focus-in-hook 'diff-hl-update)
 (add-hook 'prog-mode-hook 'fci-mode); set long line ruler
 (add-hook 'git-commit-mode-hook 'fci-mode)
+(add-hook 'prog-mode-hook (lambda () (setq indent-tabs-mode t)))
 
 (setq org-agenda-files '("~/doc/notes"))
 
@@ -59,7 +60,7 @@ There are two things you can do about this warning:
 (global-anzu-mode); show total matches in find/replace
 (global-git-commit-mode)
 (dtrt-indent-global-mode); figure out file indentation
-(smart-tabs-mode); indent with tabs, align with spaces
+(smart-tabs-insinuate 'c 'c++)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
@@ -73,6 +74,7 @@ There are two things you can do about this warning:
 
 (setq-default global-mode-string '(:eval (format "  %dL" total-lines)))
 (setq-default tab-width 4)
+(setq-default indent-tabs-mode nil)
 (setq-default c-basic-offset 4)
 (setq-default auto-save-default nil)
 (setq-default make-backup-files nil)
