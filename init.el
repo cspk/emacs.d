@@ -59,6 +59,7 @@ There are two things you can do about this warning:
 (global-total-lines-mode)
 (global-anzu-mode); show total matches in find/replace
 (global-git-commit-mode)
+(global-whitespace-mode)
 (global-whitespace-cleanup-mode)
 (dtrt-indent-global-mode); figure out file indentation
 (smart-tabs-insinuate 'c 'c++)
@@ -92,6 +93,7 @@ There are two things you can do about this warning:
 (setq-default org-log-done 'note)
 (setq-default org-startup-indented t)
 (setq-default find-file-visit-truename t)
+(setq whitespace-style '(face trailing))
 
 ;(whole-line-or-region-global-mode t)
 (doom-modeline-mode)
