@@ -59,6 +59,7 @@ There are two things you can do about this warning:
 (global-total-lines-mode)
 (global-anzu-mode); show total matches in find/replace
 (global-git-commit-mode)
+(global-whitespace-cleanup-mode)
 (dtrt-indent-global-mode); figure out file indentation
 (smart-tabs-insinuate 'c 'c++)
 (menu-bar-mode -1)
