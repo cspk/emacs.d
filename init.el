@@ -54,6 +54,7 @@ There are two things you can do about this warning:
 (setq org-pomodoro-length 30)
 (setq org-pomodoro-long-break-length 30)
 (setq org-pomodoro-manual-break t)
+(setq org-pomodoro-expiry-time 60)
 (setq org-pomodoro-format "Pomodoro - %s")
 (setq org-pomodoro-short-break-format "Short - %s")
 (setq org-pomodoro-long-break-format "Long - %s")
