@@ -51,6 +51,13 @@ There are two things you can do about this warning:
 (add-hook 'prog-mode-hook (lambda () (setq indent-tabs-mode t)))
 
 (setq org-agenda-files '("~/doc/notes"))
+(setq org-pomodoro-length 30)
+(setq org-pomodoro-long-break-length 30)
+(setq org-pomodoro-manual-break t)
+(setq org-pomodoro-format "Pomodoro - %s")
+(setq org-pomodoro-short-break-format "Short - %s")
+(setq org-pomodoro-long-break-format "Long - %s")
+(setq org-pomodoro-overtime-format "Overtime - %s")
 
 (global-diff-hl-mode)
 (global-display-line-numbers-mode)
