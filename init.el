@@ -89,8 +89,7 @@ There are two things you can do about this warning:
 (add-to-list 'default-frame-alist
              '(font . "Terminus-10"))
 
-(setq-default global-mode-string
-              '(:eval (format "%s  %dL" org-pomodoro-mode-line total-lines)))
+(setq-default global-mode-string '(:eval (format "  %dL" total-lines)))
 (setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)
 (setq-default c-basic-offset 4)
