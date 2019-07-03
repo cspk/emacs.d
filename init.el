@@ -109,6 +109,8 @@ There are two things you can do about this warning:
 (setq-default org-startup-indented t)
 (setq-default find-file-visit-truename t)
 (setq whitespace-style '(face trailing))
+(setq-default org-display-custom-times t)
+(setq-default org-time-stamp-custom-formats '("<%a %d.%m.%Y>" . "<%a %d.%m.%Y %H:%M>"))
 
 ;(whole-line-or-region-global-mode t)
 (doom-modeline-mode)
