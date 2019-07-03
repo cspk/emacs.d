@@ -51,6 +51,12 @@ There are two things you can do about this warning:
 (add-hook 'prog-mode-hook (lambda () (setq indent-tabs-mode t)))
 
 (setq org-agenda-files '("~/doc/notes"))
+(setq org-agenda-files (apply 'append
+                              (mapcar
+                              (lambda (directory)
+                                (directory-files-recursively
+                                 directory org-agenda-file-regexp))
+                              '("~/doc/notes/"))))
 (setq org-pomodoro-length 30)
 (setq org-pomodoro-long-break-length 30)
 (setq org-pomodoro-manual-break t)
