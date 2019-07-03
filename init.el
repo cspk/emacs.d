@@ -112,6 +112,16 @@ There are two things you can do about this warning:
 (setq-default org-display-custom-times t)
 (setq-default org-time-stamp-custom-formats '("<%a %d.%m.%Y>" . "<%a %d.%m.%Y %H:%M>"))
 
+(setq org-log-note-headings '((done . "CLOSING NOTE")
+                              (state . "State %-12s from %-12S %t")
+                              (note . "Note taken on %t")
+                              (reschedule . "Rescheduled from %S on %t")
+                              (delschedule . "Not scheduled, was %S on %t")
+                              (redeadline . "New deadline from %S on %t")
+                              (deldeadline . "Removed deadline, was %S on %t")
+                              (refile . "Refiled on %t")
+                              (clock-out . "")))
+
 ;(whole-line-or-region-global-mode t)
 (doom-modeline-mode)
 (helm-mode)
