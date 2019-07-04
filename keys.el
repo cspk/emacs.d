@@ -10,6 +10,8 @@
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
 (global-set-key (kbd "C-x C-b") 'switch-to-buffer)
+(global-set-key (kbd "C-<down>") 'scroll-up-line)
+(global-set-key (kbd "C-<up>") 'scroll-down-line)
 
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (global-set-key (kbd "M-w") 'easy-kill)
