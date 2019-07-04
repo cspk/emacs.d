@@ -139,3 +139,12 @@ There are two things you can do about this warning:
     (funcall f)))
 
 (advice-add 'save-buffer :around #'inhibit-save-message)
+
+(require 'cl-lib)
+(add-hook
+ 'tty-setup-hook
+ '(lambda ()
+    (cl-case (assoc-default 'terminal-initted (terminal-parameters))
+      (terminal-init-rxvt
+       (when (getenv "COLORTERM" (selected-frame))
+         (urxvt-keybinder-setup))))))
