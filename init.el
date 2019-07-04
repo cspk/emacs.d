@@ -50,7 +50,7 @@ There are two things you can do about this warning:
 (add-hook 'git-commit-mode-hook 'fci-mode)
 (add-hook 'prog-mode-hook (lambda () (setq indent-tabs-mode t)))
 
-(setq org-agenda-files '("~/doc/notes"))
+(setq org-agenda-file-regexp "\\`[^.].*\\.org\\'")
 (setq org-agenda-files (apply 'append
                               (mapcar
                               (lambda (directory)
