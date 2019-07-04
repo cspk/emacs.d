@@ -44,6 +44,12 @@ There are two things you can do about this warning:
   (when (and (buffer-file-name) (buffer-modified-p))
     (save-buffer)))
 
+(defun fix-C-S-backspace ()
+  (interactive)
+  (define-key input-decode-map "\e[27;6;15~" [C-S-backspace])); for urxvt only
+
+(add-hook 'tty-setup-hook 'fix-C-S-backspace)
+
 (add-hook 'focus-out-hook 'save-current-buffer-if-needed)
 (add-hook 'focus-in-hook 'diff-hl-update)
 (add-hook 'prog-mode-hook 'fci-mode); set long line ruler
