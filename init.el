@@ -54,7 +54,7 @@ There are two things you can do about this warning:
 (add-hook 'focus-in-hook 'diff-hl-update)
 (add-hook 'prog-mode-hook 'fci-mode); set long line ruler
 (add-hook 'git-commit-mode-hook 'fci-mode)
-(add-hook 'prog-mode-hook (lambda () (setq indent-tabs-mode t)))
+(add-hook 'prog-mode-hook (lambda () (setq indent-tabs-mode nil)))
 
 (setq org-agenda-file-regexp "\\`[^.].*\\.org\\'")
 (setq org-agenda-files (apply 'append
