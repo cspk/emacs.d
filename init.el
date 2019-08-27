@@ -29,6 +29,9 @@ There are two things you can do about this warning:
   (package-refresh-contents))
 (package-install-selected-packages)
 
+(add-to-list 'load-path "~/.emacs.d/custom-packages/buffer-focus-hook")
+(load "buffer-focus-hook")
+
 (unless (display-graphic-p)
   (require 'terminal-focus-reporting)
   (terminal-focus-reporting-mode))
@@ -57,6 +60,12 @@ There are two things you can do about this warning:
 (add-hook 'prog-mode-hook (lambda () (setq indent-tabs-mode nil)))
 (add-hook 'org-mode-hook 'fci-mode)
 (add-hook 'org-mode-hook 'auto-fill-mode)
+
+(defun setup-buffer-focus-hooks ()
+  (buffer-focus-out-callback 'save-current-buffer-if-needed)
+  (buffer-focus-in-callback 'diff-hl-update))
+
+(add-hook 'find-file-hook 'setup-buffer-focus-hooks)
 
 (setq org-agenda-file-regexp "\\`[^.].*\\.org\\'")
 (setq org-agenda-files (apply 'append
