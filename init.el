@@ -128,6 +128,10 @@ There are two things you can do about this warning:
 (setq-default org-display-custom-times t)
 (setq-default org-time-stamp-custom-formats '("<%a %d.%m.%Y>" . "<%a %d.%m.%Y %H:%M>"))
 
+(global-auto-complete-mode)
+(setq ac-auto-start nil)
+(ac-set-trigger-key "TAB")
+
 (setq helm-type-buffer-actions
       '(("Switch to buffers(s)" . helm-buffer-switch-buffers)
         ("Kill buffers(s) `C-c k'" . helm-kill-marked-buffers)
