@@ -127,6 +127,7 @@ There are two things you can do about this warning:
 (setq whitespace-style '(face trailing))
 (setq-default org-display-custom-times t)
 (setq-default org-time-stamp-custom-formats '("<%a %d.%m.%Y>" . "<%a %d.%m.%Y %H:%M>"))
+(setq-default doom-modeline-unicode-fallback nil)
 
 (global-auto-complete-mode)
 (setq ac-auto-start nil)
