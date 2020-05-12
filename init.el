@@ -22,6 +22,8 @@ There are two things you can do about this warning:
 ;; You may delete these explanatory comments.
 (package-initialize)
 
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+
 (setq custom-file (concat user-emacs-directory "/custom.el"))
 (load-file custom-file)
 
